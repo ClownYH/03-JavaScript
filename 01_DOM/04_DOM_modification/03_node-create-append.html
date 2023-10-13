@@ -17,5 +17,38 @@
         Node.prototype.appendChild(childNode) :
         인수로 전달받은 노드를 appendChild 메서드를 호출한 노드의 마지막 자식 노드로 추가
     </p>
+    <ul id="drink">
+      <li>커피</li>
+    </ul>
+    <script>
+        const $drink = document.getElementById('drink');
+
+        const $li = document.createElement('li');
+
+        $li.textContent = "콜라";
+
+        $drink.appendChild($li);
+        //$drink 요소에 $li의 요소를 자식 요소로 삽입한다.
+    </script>
+
+    <h3>복수의 노드 생성과 추가</h3>
+    <ul id="food">
+      <li>김치찌개</li>
+    </ul>
+    <script>
+        const $food = document.getElementById("food");
+
+        const $fragment = document.createDocumentFragment();
+        //Fragment는 가상의 DOM, 메모리 상에서만 그려주는 것
+        ["된장찌개", "고등어구이", "순대국"].forEach(menu =>{
+          //[a, b, c...]은 배열은 만든 것, .forEach는 참조하여 배열된 요소를 각각 적용하여 반복(요소를 전부 적용할 때까지)
+          // =>는 화살표 함수
+          const $li = document.createElement("li");
+          $li.textContent = menu;
+          $fragment.appendChild($li);
+        });
+
+        $food.appendChild($fragment);
+    </script>
 </body>
 </html>
