@@ -13,32 +13,47 @@
     </p>
       <ul id="food">
         <li>김치찌개</li>
+        <!-- 0 -->
         <li>된장찌개</li>
+        <!-- 1 -->
         <li>고등어구이</li>
+        <!-- 2 -->
       </ul>
 
       <ul id="drink">
         <li>커피</li>
+        <!-- 3 -->
         <li class="li">콜라</li>
+        <!-- 4 -->
         <li class="li">우유</li>
+        <!-- 5 -->
       </ul>
       <script>
           const $lists = document.getElementsByTagName("li");
+          //document에 있는 Tag명이 <li>인 요소들을 $lists에 대입하여 상수로 선언한다. 컴퓨터의 언어는 0부터 시작한다.
           $lists[0].innerText="짬뽕찌개";
+          //$lists의 0번값을 "짬뽕지개"로 대입한다.
           $lists[0].style.color="red";
+          //$lists의 0번값의 색을 red로 한다.
           console.log($lists[0]);
 
           let changeColor = 0;
+          //changeColor를 0으로 대입한다.
           for(let i = 0; i < $lists.length; i++){
-              //6
+              /*$lists의 length는 총 6개이므로 6(0, 1, 2, 3, 4, 5)이다.
+              첫 번째 선언은 i=0(i에 0을 대입)이다. 그후 선언문에 그 값을 대입하여 시행하고,
+              그 값이 참일 경우 i++(i값에 1을 더하면서 반복)을 시행하고 거짓이 나오기 전까지 반복한다.
+              거짓이 나온 경우 동작을 중지한다.*/
               $lists[i].style.backgroundColor= "rgb(130, 220, " + changeColor + ")";
               console.log($lists[i].style.backgroundColor);
               console.log(typeof $lists[i].style.backgroundColor);
               changeColor += 50;
+              //changeColor 또한 0부터 대입하여 시행하며, i++가 반복됨에 따라 50씩 그 값을 더해 대입한다.
           }
           console.log($lists);
 
           [...$lists].forEach(list => list.style.color = "blue");
+          //$lists가 갖는 노드 값을 각각 list에 대입하여 시행한다. 모든 값이 시행된 후 시행을 중지한다.
 
           const $drink = document.getElementById("drink");
           console.log($drink);
@@ -46,6 +61,7 @@
           console.log($listsFormDrink);
 
           [...$listsFormDrink].forEach(list => list.style.color="red");
+          //$listsFormDrink가 갖는 노드 값을 각각 list에 대입하여 시행한다. 모든 값이 시행된 후 시행을 중지한다.
 
       </script>
 </body>
