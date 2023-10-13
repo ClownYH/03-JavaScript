@@ -6,6 +6,22 @@
   <title>Document</title>
 </head>
 <body>
-    
+    <h1>02. 부모 노드 탐색</h1>
+    <p>
+        부모 노드를 탐색하려면 Node.prototype.parentNode 
+        텍스트 노드는 dom 트리의 최종단 노드인 리프 노드(leaf mode)이므로 부모가 텍스트 노드인 경우는 없다.
+    </p>
+    <script>
+        console.log("========html========");
+        console.log(document.documentElement);
+        console.log("========head========");
+        console.log(document.head);
+        console.log("========body========");
+        console.log(document.body);
+        console.log("========head.parent========");
+        console.log(document.head.parentNode);
+        console.log("========body.parent========");
+        console.log(document.body.parentNode);
+    </script>
 </body>
 </html>
