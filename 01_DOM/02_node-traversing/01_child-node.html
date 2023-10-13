@@ -34,9 +34,13 @@
     </ol>
     <script>
         const $node = document.getElementById("node");
+        //document에 있는 Id가 node인 요소의 값을 함수 $node에 대입하여 상수로 선언한다.
         console.log($node.childNodes);
+        //$node의 자식 노드(요소, 텍스트)를 모두 탐색하여 반환한다.
         console.log($node.firstChild);
+        //$node의 첫 번째 자식 노드(요소, 텍스트)를 탐색하여 반환한다.
         console.log($node.lastChild);
+        //$node의 마지막 자식 노드(요소, 텍스트)를 탐색하여 반환한다.
     </script>
 
     <ol id="element">
@@ -55,11 +59,13 @@
     </ol>
     <script>
         const $element  = document.getElementById("element");
+        //document에 있는 Id가 element인 요소의 값을 $element 함수에 대입하여 상수로 선언한다.
         console.log($element.children);
-
+        //$element의 자식 요소를 모두 탐색한다.
         console.log($element.firstElementChild);
-
+        //$element의 첫 번째 자식 요소를 탐색한다.
         console.log($element.lastElementChild);
+        //$element의 마지막 자식 요소를 탐색한다.
     </script>
 </body>
 </html>

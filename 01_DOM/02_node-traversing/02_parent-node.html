@@ -14,14 +14,30 @@
     <script>
         console.log("========html========");
         console.log(document.documentElement);
+        //document의 모든 요소를 반환한다.
         console.log("========head========");
         console.log(document.head);
+        //document의 <head> 요소를 반환한다.
         console.log("========body========");
         console.log(document.body);
-        console.log("========head.parent========");
+        //document의 <body> 요소를 반환한다.
+        console.log("========head의 parentNode========");
         console.log(document.head.parentNode);
-        console.log("========body.parent========");
+        //document의 <head> 요소의 부모 노드를 반환한다.
+        console.log("========body의 parentNode========");
         console.log(document.body.parentNode);
+        //document의 <body> 요소의 부모 노드를 반환한다.
+    </script>
+    
+    <ul id="lists">
+        <li class="coffee">커피</li>
+        <li class="coke">콜라</li>
+        <li class="milk">우유</li>
+    </ul>
+    <script>
+        const $coke = document.querySelector(".coke");
+        console.log($coke.parentNode);
+        console.log($coke.parentElement);
     </script>
 </body>
 </html>
