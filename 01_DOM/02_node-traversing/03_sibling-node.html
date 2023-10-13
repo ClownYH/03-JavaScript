@@ -24,15 +24,25 @@
         /*$node 함수 안에 있는 firstChild 속성을 꺼내 마치 하나의 함수처럼 사용할 수 있게 한다. 이를 상수로 선언한다.
          const $test = $node.firstChild; 와 같다. */
         console.log(firstChild);
+        //$node의 첫 번째 자식 노드는 텍스트 노드이다.
 
         const {firstElementChild} = $node;
         console.log(firstElementChild);
+        //$node의 첫 번째 자식 요소는 <li>~이전 형제~</li>이다.
 
         const {nextSibling} = firstChild;
         console.log(nextSibling);
+        //firstChild는 텍스트 노드이며, 다음 형제 노드는 <li>~다음 형제~</li>이다.
 
         const {previousSibling} = nextSibling;
         console.log(previousSibling);
+        //nextChild는 <li>~다음 형제~</li>이며, 이전 형제 노드는 텍스트 노드이다.
+        /* $node의 자식 노드들의 순서 나열
+           <li>~이전 형제~</li> -> 첫 번째 요소 노드
+           첫 번째 텍스트 노드
+           <li>~다음 형제~</li> -> 두 번째 요소 노드
+           두 번째 텍스트 노드 */
+
     </script>
 </body>
 </html>
