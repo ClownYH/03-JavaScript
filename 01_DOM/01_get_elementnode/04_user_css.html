@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>css 선택자를 이용한 요소 노드 취득</h1>
+    <p>
+        Document.prototype/Element.prototype.querySelector 메서드는 인수로 전달한 css 선택자를 만족시키는 하나의 요소 노드를 탐색하여 반환한다.
+    </p>
+    <div class="area">
+        <p>first</p>
+    </div>
+    <div class="area">
+        <p>second</p>
+    </div>
+    <script>
+        const $area = document.querySelector(".area");
+        //document에 있는 class명이 area인 요소 중 한 개(이 경우 가장 먼저 확인되는 것, 즉 첫 번째)를 $area라는 함수의 값으로 대입한다.
+        console.log($area);
+
+        $area.style.backgroundColor="red";
+        //$area 함수의 값의 배경색을 red로 한다. 
+        const $first = document.querySelector("p");
+        //document에 있는 <p>태그 요소 중 한 개(이 경우 가장 가장 먼저 확인되는 것, 즉 첫 번째)을 $first라는 함수의 값으로 대입한다.
+        console.log($first);
+
+        $first.style.color="blue";
+        //$first의 색을 파랑으로 한다.
+     </script>
+
+     <p>
+        Document.prototype/Element.prototype.querySelectorAll 메서드는 인수로 전달한 css 선택자를 만족시키는 모든 요소 노드를 탐색하여 반환한다.
+    </p>
+</body>
+</html>
