@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1 id="hi">안녕하세요</h1>
+    <button id="btn1">1번 버튼</button>
+    <button id="btn2">2번 버튼</button>
+    <button onclick="alert('경고')">3번 버튼</button>
+
+    <script>
+        const $id = document.getElementById("hi");
+
+        const $btn1 = document.getElementById("btn1");
+        $btn1.onclick = function(){
+            $id.style.color = "red";
+        }   
+        const $btn2 = document.getElementById("btn2");
+        $btn2.onclick = function(){
+            $id.textContent = "hi";
+        }
+    </script>
+
+<!-- 
+    <h1 id="test">안녕하세요</h1>   
+    
+      <button onclick="btn1()">버튼1</button>
+      <button onclick="btn2()">버튼2</button>
+      <button onclick="btn3()">버튼3</button>
+
+    <script>
+          const $h1 = document.getElementById("test");
+
+          function btn1(){
+              $h1.style.color="red";
+          }
+
+          function btn2(){
+              $h1.innerHTML="hi";
+          }
+
+          function btn3(){
+              alert("경고");
+          }
+    </script>
+    -->
+</body>
+</html>
