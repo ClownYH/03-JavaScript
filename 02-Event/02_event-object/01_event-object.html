@@ -23,10 +23,13 @@
         const $msg = document.querySelector(".message");
 
         function showCoords(e){
+            //e는 이벤트 객체
             console.log(e);
             $msg.textContent = `clientX:${e.clientX}, clientY:${e.clientY}`;
+            //``을 사용, ${} 스크립트에 있는 변수를 읽을 때
         }
         document.onclick = showCoords;
+        //문서 전체에 이벤트를 적용
     </script>
 </body>
 </html>
