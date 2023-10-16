@@ -12,8 +12,8 @@
         setter와 getter가 모두 존재하는 접근자 프로퍼티로
         요소 노드의 인라인 스타일을 취득하거나 추가 또는 변경한다.
 
-        HTMLElement.prototype.style 프로퍼티는 CssStyleEdclaration
-        타입의 갯체가 반환하는데 이 프로퍼티에 값을 할당하면 해당
+        HTMLElement.prototype.style 프로퍼티는 CssStyleDeclaration
+        타입의 객체가 반환하는데 이 프로퍼티에 값을 할당하면 해당
         css 프로퍼티가 인라인 스타일로 html 요소에 추가되거나 변경된다.
     </pre>
     <div style="color: white;"> area</div>
@@ -32,7 +32,7 @@
         $area.style.backgroundColor="lightgray";
 
         function test(){
-          //test()라는 함수를 생성한다.
+          //test()라는 함수를 정의한다.
             const $input = document.querySelector("input");
             let test1 = $input.value;
             //test1은 $input의 value라는 변수를 지정한다.)
