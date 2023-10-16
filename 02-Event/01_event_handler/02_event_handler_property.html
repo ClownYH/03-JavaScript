@@ -25,8 +25,9 @@
       $button.onclick = function(){
           alert("dom 프로퍼티 방식으로 이벤트 핸들러 등록완료");
       }
-
+      //$button을 클릭했을 때 () 함수를 동작하는데 이 함수는 경고창이 뜨도록 정의
       $button.onclick = () => {alert("이벤트 덮어쓰기")}
+      //$button을 클릭했을 때 동작하는 함수의 내용을 변경한다.
     </script>
 </body>
 </html>
