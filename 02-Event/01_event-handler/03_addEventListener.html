@@ -28,11 +28,13 @@
     <div style="width: 500px; height: 500px; background-color: aqua;" onclick="alert('캡처링')">
         <button>버튼</button>  
     </div>
+    <!-- <div>영역의 블럭 안의 어느 지점을 클릭해도 반응함 -->
     <script>
         const $button = document.getElementById("btn");
 
         $button.addEventListener('click', function(){
             alert("클릭")
+            //addEventListener는 기존 동작을 대체하지 않는다(다중 동작 가능). 영역이 아닌 요소에 의해 작동한다.
         });
 
         //참조가 동일한 이벤트 핸들러를 중복 등록하면 하나의 핸들러만 등록된다.
