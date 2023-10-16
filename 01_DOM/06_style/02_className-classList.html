@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h2>02. className과 classList</h2>
+    <pre>
+        class 어트리뷰트에 대응하는 Dom 프로퍼티는 class가 아니라
+        className, classList이다.
+        요소 노드와 className 프로퍼티는 setter와 getter가 모두 존재하는
+        접근자로 프로퍼티로 요소 노드의 className 프로퍼티를 참조하면
+        class 어트리뷰트의 값을 문자열로 반환하고,
+        요소 노드의 className프로퍼티에 문자열을 할당하면 class 어트리뷰트값을
+        할당한 문자열로 변경한다.
+        Element.prototype.classList 프로퍼티는 class 어트리뷰트의 정보를 담은
+        DomTokenList 객체를 반환한다.
+    </pre>
+
+    <div class="area test test1">안녕</div>
+    <script>
+        const $area = document.querySelector(".area");
+        console.log($area.className);
+        //$area의 className을 반환한다.
+
+        // $area.className = "test";
+        //$area의 calssName을 test로 변경한다. 주석으로 변경되어 작동하지 않는다.
+        console.log($area.classList);
+        //$area의 classList를 반환한다.
+
+
+        $area.classList.add("circle");
+        //$area에 circle을 class로 추가한다.
+        $area.classList.add("lightgray");
+        //$area에 lightgray를 class로 추가한다.
+
+        console.log($area.classList.item(0));
+        console.log($area.classList.item(1));
+        console.log($area.classList.item(2));
+        console.log($area.classList.item(3));
+        console.log($area.classList.item(4));
+
+        console.log($area.classList.contains("circle"));
+        //contains는 그 안에 있는지 없는지를 참과 거짓으로 확인한다.
+        console.log($area.classList.contains("yellow"));
+
+        $area.classList.replace("lightgray", "yellow");
+
+        console.log($area.classList);
+
+        $area.classList.toggle("yellow");
+        //toggle은 그 값이 존재하면 없애고, 없으면 만든다.
+        console.log("========================");
+        console.log($area.classList);
+        console.log("========================");
+        $area.classList.toggle("yellow");
+        console.log("--------------------------");
+        $area.classList.remove("yellow");
+        console.log($area.classList);
+    </script>
+</body>
+</html>

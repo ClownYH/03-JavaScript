@@ -19,23 +19,33 @@
     <input type="text" id="username" value="user01"/>
     <label for="nickname">닉네임</label>
     <input type="text" id="nickname" vlaue="JSBeginner"/>
+
     <script>
         const $user = document.getElementById("username");
-        //document에 있는 아이디가 "username"인 요소를 
+        //document에 있는 아이디가 "username"인 요소를 $user 함수로 상수 선언한다.
 
         $user.oninput = () =>{
+        //$user에 무언가 입력되었을 때만
             console.log("value 프로퍼티 값", $user.value);
+            // -value 프로퍼티 값 JSBeginner+입력값- 으로 반환한다.
             console.log("value 어트리뷰트 값", $user.getAttribute("value"));
+            // -value 어트리뷰트 값 user01(원래 지정된 값)- 으로 반환한다.
         }
 
         const $nickname = document.getElementById("nickname");
-        $nickname.value="JSMater";
+        $nickname.value="JSMaster";
+        //$nickname의 value 값을 JSMaster로 변경한다.
         console.log("value 프로퍼티 값", $nickname.value);
-        console.log("value 프로퍼티 값", $nickname.getAttribute("value"));
+        // -"value 프로퍼티 값" JSMaster- 로 반환한다.
+        console.log("value 어트리뷰트 값", $nickname.getAttribute("value"));
+        // -"value 어트리뷰트 값" null- 로 반환한다.
 
         $nickname.id = "nick";
+        //$nickname의 아이디를 nick으로 변경한다.
         console.log("$nickname.id", $nickname.id);
+        // -"$nickname.id" 현재 $nickname의 아이디-로 반환한다.
         console.log("$nickname.id", $nickname.getAttribute("id"));
+        // -"$nickname.id" 현재 $nickname의 아이디의 속성값-으로 반환한다.
     </script>
 
     <pre>
@@ -52,7 +62,9 @@
         const $checkbox = document.querySelector("input[type=checkbox]");
 
         console.log($checkbox.getAttribute("checked"));
+        //$checkbox에 checked 어트리뷰트 값을 반환한다.
         console.log($checkbox.checked);
+        //$checkbox에 checked를 확인한다.
     </script>
 </body>
 </html>
